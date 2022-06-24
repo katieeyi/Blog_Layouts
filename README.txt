@@ -1,1 +1,1 @@
-Hello Git and Github - change later
+Collection of various versions of blog layouts
