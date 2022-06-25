@@ -48,10 +48,11 @@
   max-height: 25px;
 }
 
+
+
 #subscribe {
   display: flex;
   justify-content: center;
-
 padding: 8px;
 }
 
@@ -74,6 +75,16 @@ input[type=submit] {
   padding:5px 15px;
     background:#ccc;
     border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input[type=submit]:hover {
+  padding:5px 15px;
+    background: #FFD700;
+    border:2px solid #ffd700;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;

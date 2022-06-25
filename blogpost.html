@@ -13,48 +13,43 @@
 </head>
 
 <body>
-  <div id="pagecontainer">
 
-    <div id="navbar">
-      <div><a class="pagelinks" href="index.html">HOME</a></div>
-      <div><a class="pagelinks" href="#">LINK 2</a></div>
-      <div><a class="pagelinks" href="#">LINK 3</a></div>
-      <div><a class="pagelinks" href="#">LINK 4</a></div>
-      <div><a class="pagelinks" href="#">LINK 5</a></div>
-    </div>
 
-    <div id="social">
-      <div id="socialiconslist">
-        <div class="socialicons" id="facebook"><img src="icons/fb.png"></div>
-        <div class="socialicons" id="instagram"><img src="icons/ig.png"></div>
-        <div class="socialicons" id="twitter"><img src="icons/twitter.png"></div>
-        <div class="socialicons" id="pinterest"><img src="icons/pin.png"></div>
-        <div class="socialicons" id="mail"><img src="icons/email.png"></div>
+<div id="headercontainer">
+
+      <div id="navbar">
+        <div><a class="pagelinks" href="index.html">HOME</a></div>
+        <div><a class="pagelinks" href="#">LINK 2</a></div>
+        <div><a class="pagelinks" href="#">LINK 3</a></div>
+        <div><a class="pagelinks" href="#">LINK 4</a></div>
+        <div><a class="pagelinks" href="#">LINK 5</a></div>
       </div>
-
-      <div>
-        <div id="subscribe">
-          <form>
-            <label for "email">Subscribe:</label>
-            <input type="text" id="email" name="email" value="Email Address">
-            <input type="submit" value="Submit" id="emailsubmit">
-          </form>
-        </div>
-      </div>
-    </div>
-
-
-    <div id="herophoto">
+      <div id="herophoto">
       <div id="overlay">
-        <h1>Paris</h1>
+        <div id="articleinfo">
+
+        <h1>Blog Title</h1>
         <h2>12.30.2020</h2>
       </div>
+        <div id="socialiconslist">
+          <div class="socialicons" id="facebook"><a href="https://www.facebook.com/"><img src="icons/fb.png"></a></div>
+          <div class="socialicons" id="instagram"><a href="https://www.instagram.com/"><img src="icons/ig.png"></a></div>
+          <div class="socialicons" id="twitter"><img src="icons/twitter.png"></div>
+          <div class="socialicons" id="pinterest"><img src="icons/pin.png"></div>
+          <div class="socialicons" id="mail"><img src="icons/email.png"></div>
+        </div>
+
+      </div>
     </div>
 
+
+    </div>
+
+  <div id="pagecontainer">
     <div id="article">
       <div id="byline">
       <img id="avatar" src="icons/avatar.png" alt="avatar">
-      <h3 id="author">Author Name</h3>
+      <h3 id="author">Author | 12:31.2022 | 5:55pm</h3>
       </div>
       <p class="blog_body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
       </p>
@@ -67,8 +62,39 @@
       </p>
     </div>
 
+    <div id="social">
+      <div id="profile">
+        <div id="profilepic"></div>
+        <div id="profilename">AUTHOR</div>
+        <div id="profiledescription">Creative Thinker, Blogger</div>
+      </div>
+    <!-- Social Icons List
+     <div id="socialiconslist">
+        <div class="socialicons" id="facebook"><img src="icons/fb.png"></div>
+        <div class="socialicons" id="instagram"><img src="icons/ig.png"></div>
+        <div class="socialicons" id="twitter"><img src="icons/twitter.png"></div>
+        <div class="socialicons" id="pinterest"><img src="icons/pin.png"></div>
+        <div class="socialicons" id="mail"><img src="icons/email.png"></div>
+      </div>
+
+    -->
+
+      <div>
+        <div id="subscribe">
+          <form>
+            <label color="blue" for "email">Subscribe:</label><br>
+            <input type="text" id="email" name="email" value="Email Address">
+            <input type="submit" value="Submit" id="emailsubmit">
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+
     <div id="archive">
       <h3>Archive</h3>
+      <hr>
       <ul>
         <li><a href="#">2021</a></li>
         <li><a href="#">2020</a></li>
@@ -77,8 +103,6 @@
         <li><a href="#">2017</a></li>
         <li><a href="#">2016</a></li>
         <li><a href="#">2015</a></li>
-        <li><a href="#">2014</a></li>
-        <li><a href="#">2013</a></li>
         <li><a href="#">See All</a></li>
       </ul>
     </div>
@@ -136,7 +160,15 @@
 
       <footer>
         <!--<div id="footerinfo">-->
-          <p id="copyright">Copyright 2021</p>
+
+  <div>
+        <div id="subscribe">
+          <form>
+            <label for "email">Subscribe:</label>
+            <input type="text" id="email" name="email" value="Email Address">
+            <input type="submit" value="Submit" id="emailsubmit">
+          </form>
+        </div>
           <div id="bottomsoc">
             <div class="socialicons" id="facebook"><img src="icons/fb.png"></div>
             <div class="socialicons" id="instagram"><img src="icons/ig.png"></div>
@@ -144,6 +176,11 @@
             <div class="socialicons" id="pinterest"><img src="icons/pin.png"></div>
             <div class="socialicons" id="mail"><img src="icons/email.png"></div>
           </div>
+        <p id="copyright">Copyright 2021</p>
+
+
+  </div>
+
         <!--</div>-->
       </footer>
 

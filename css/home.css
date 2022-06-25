@@ -13,10 +13,6 @@ body{
 
 }
 
-#headercontainer{
-
-}
-
 #topbar{
   width: 100%;
   display: flex;
@@ -41,7 +37,7 @@ body{
 }
 
 #searchwords{
-  border-bottom: 1px white solid;
+  border-bottom: 2px #FFD700 solid;
   padding-right: 15px;
   font-weight: 600;
   font-size: 1.5em;
@@ -57,7 +53,7 @@ body{
   background: url("../images/basketball2.jpg");
   background-repeat:no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 580px;
 
 }
 
@@ -91,24 +87,7 @@ h1{
 }
 
 
-#pagecontainer {
-  display: grid;
-    border: 1px #DCDCDC solid;
-  max-width: 80%;
-  /*border: 1px solid black;*/
-  background-color: #fff;
-  margin: auto;
 
-  position: relative;
-  grid-template-rows: 525px 650px 100px;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-
-                  "blogs social"
-                  "blogs archive"
-                  "foot foot";
-
-}
 
 #mainarticle{
   display: flex;
@@ -129,6 +108,7 @@ h1{
 }
 
 h2 {
+  font-family: 'Reenie Beanie', cursive;
   font-family: 'Open Sans', sans-serif;
   font-size: 70px;
   font-weight: 400;
@@ -137,15 +117,40 @@ h2 {
 
 .more{
   color: white;
+}
 
+.more:hover{
+  border-bottom: 1px solid #FFD700;
+  cursor: pointer;
+}
+
+#pagecontainer {
+  border: 1px #DCDCDC solid;
+  max-width: 80%;
+  /*border: 1px solid black;*/
+  background-color: #fff;
+  margin: auto;
+
+  position: relative;
+  /*
+
+  display: grid;
+  grid-template-rows: 525px 650px 100px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+                  "blogs social"
+                  "blogs archive"
+                  "foot foot";
+                  */
 
 }
 
 #blogs {
+  /*
   grid-area: blogs;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
+  */
   margin: 20px;
-  overflow: scroll;
 }
 
 #blogcards{
@@ -157,28 +162,32 @@ h2 {
 
 
 .card {
+  /*
+    border: .5px solid #E8E8E8;
+    */
   height: 450px;
-  width: 600px;
-  border: .5px solid #E8E8E8;
+  width: 100%;
+
   margin-right: 15px;
   margin-bottom: 15px;
   font-size: 14px;
-
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
 }
 
-.card a {
-  text-decoration: none;
-  color: #303030;
-}
 
-.card:hover {
+
+.card a:hover {
   box-shadow: 5px 5px 3px #A9A9A9;
 }
 
-.thumbnailphoto{
-  height: 75%;
-  background-color:	#888;
 
+.thumbnailphoto{
+  width: 400px;
+  height: 420px;
+  background-color:	#888;
+  border-radius: 5px;
 }
 
 #thumbnailphoto1 {
@@ -186,23 +195,47 @@ h2 {
   background-size: cover;
 }
 
-.byline{
-/*  display: flex;*/
-
-}
-
 .thumbnailcopy {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  text-align: center;
+  width: 600px;
+  margin: auto;
 }
 
+.byline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
 .blogthumbtitle {
   font-weight: bold;
-
+  font-size: 16px;
 }
 
+.blogthumbdate{
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+
+.blogblurb{
+  margin-top: 15px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+
+
+
+.articlelink{
+  padding: 8px;
+  border-radius: 5px;
+  border: 3px solid #FFD700;
+}
+
+.articlelink:hover{
+  background-color: #FFD700;
+  cursor: pointer;
+}
 
 #archive {
   grid-area: archive;
@@ -245,81 +278,293 @@ footer {
 
 
 /*MEDIA QUERIES*/
-@media(max-width: 600px){
+@media(max-width: 1375px){
 
   #pagecontainer {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+/*
     #navbar {
       display: flex;
       flex-direction: column;
-      /*border: 1px solid black;*/
-      /*background-color: #FFF0F5;*/
       align-items: center;
       padding-top: 20px;
       margin-bottom: 20px;
     }
+*/
 
+#blogs {
+  /*
+  grid-area: blogs;
+  border: 1px solid black;
+  */
+  margin: 5px;
+}
     #herophoto{
-      background: url("../images/basketball.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       height: 500px;
     }
 
-    #socialiconslist {
-      padding-top: 15px;
-      margin-bottom: 15px;
+    .card {
+      height: 500px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
     }
 
-    #subscribe {
-      padding-top: 5px;
+
+    .thumbnailcopy {
+      padding: 10px;
+    }
+}
+
+
+@media(max-width: 1125px){
+
+  #pagecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/*
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
       margin-bottom: 20px;
-      border: 1px solid black;
     }
+*/
 
-    #blogs {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 1000px;
-      overflow: scroll;
-    }
-
-
-    #blogcards{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-    }
+#blogs {
+  /*
+  grid-area: blogs;
+  border: 1px solid black;
+  */
+  margin: 5px;
+}
 
     .card {
-      height: 330px;
-      width: 310px;
-      margin-right: 15px;
-      margin-bottom: 15px;
+      height: 500px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+
+.thumbnailphoto{
+  height: 300px;
+  width: 300px;
+}
+    .thumbnailcopy {
+      padding: 10px;
+      margin: 0 auto;
+    }
+
+.blogthumbtitle{
+  font-size: 14px;
+}
+
+.blogthumbdate{
+  font-size: 12px;
+}
+    .blogblurb{
       font-size: 14px;
-      border: .5px solid #E8E8E8;
+    }
+}
 
+@media(max-width: 925px){
+
+
+
+#blogs {
+  /*
+  grid-area: blogs;
+  border: 1px solid black;
+  */
+  margin: 2px;
+}
+
+    .card {
+      height: 500px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      align-items: flex-start;
     }
 
-    .thumbnailphoto{
-      height: 75%;
+.thumbnailphoto{
 
-    }
+}
 
     .thumbnailcopy {
       padding: 10px;
     }
 
-    .blogthumbtitle {
-      font-weight: bold;
+    .blogblurb{
+      font-size: 14px;
+    }
+}
+
+@media(max-width: 800px){
+
+
+
+#blogs {
+  margin: 0;
+}
+
+    .card {
+      height: 750px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+.thumbnailphoto{
+width: 450px;
+height: 350px;
+}
+
+    .thumbnailcopy {
+      margin: 20px auto;
+      width: 75%;
+    }
+/*
+    .byline{
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+*/
+.byline{
+  align-items: center;
+}
+
+.blogthumbtitle{
+    font-size: 16px;
+}
+.blogthumbdate{
+  margin: 0;
+  font-size: 12px;
+}
+    .blogblurb{
+      font-size: 14px;
+    }
+}
 
 
+@media(max-width: 700px){
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+  }
 
+
+#pagecontainer{
+  max-width: 100%;
+}
+
+    .card {
+      height: 850px;
+    }
+
+.thumbnailphoto{
+}
+
+    .thumbnailcopy {
+      margin: 5px auto;
+      width: 75%;
+    }
+/*
+    .byline{
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+*/
+.byline{
+  align-items: center;
+}
+
+
+@media(max-width: 500px){
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+  }
+
+#herophoto{
+
+}
+
+
+  #mainarticle{
+    margin: auto;
+    text-align: center;
+  }
+
+
+  #herocontent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  #socialiconslist {
+    margin-top: 5px;
+    padding-top: 20px;
+    flex-direction: row;
+  }
+
+  .socialicons img {
+    padding: 5px 10px 0 10px;
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
+
+@media(max-width: 450px){
+h1{
+  font-size: 35px;
+}
+  #hamburger {
+    height: 23px;
+    width: 23px;
+    margin-left: 15px;
+  }
+
+
+  #search{
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 15px;
+  }
+
+  #searchwords{
+    border-bottom: 2px #FFD700 solid;
+    padding-right: 15px;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  #mag-icon{
+    width: 20px;
+    height: 20px;
+  }
+
+  #herophoto{
+    background: url("../images/basketball.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 580px;
+  }
 }
